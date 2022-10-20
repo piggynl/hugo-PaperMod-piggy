@@ -10,7 +10,7 @@
     other: "{{ .Count }} 分钟"
 
 - id: words
-  translation: 
+  translation:
     one: "字"
     other: "{{ .Count }} 字"
 
@@ -31,3 +31,12 @@
 
 - id: code_copied
   translation: "已复制！"
+
+- id: powered_by_before
+  translation: "由"
+
+- id: powered_by_after
+  translation: "提供支持"
+
+- id: modified_by_piggy
+  translation: "（有修改）"

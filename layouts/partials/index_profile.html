@@ -38,7 +38,6 @@
         <div class="buttons">
             {{- range . }}
             <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
-                <span class="button-inner">
                     {{ .name }}
                     {{- if (findRE "://" .url) }}&nbsp;
                     <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
@@ -48,7 +47,6 @@
                         <path d="M10 14L21 3"></path>
                     </svg>
                     {{- end }}
-                </span>
             </a>
             {{- end }}
         </div>

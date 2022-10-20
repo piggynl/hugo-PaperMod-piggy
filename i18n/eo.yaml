@@ -13,7 +13,7 @@
   translation: "Enhavo"
 
 - id: translations
-  translation: "tradukoj"
+  translation: "Lingvoj"
 
 - id: home
   translation: "ĉefpaĝo"
@@ -23,3 +23,12 @@
 
 - id: code_copied
   translation: "kopiite!"
+
+- id: powered_by_before
+  translation: "Funkciigita de"
+
+- id: powered_by_after
+  translation: " "
+
+- id: modified_by_piggy
+  translation: "(modifita)"

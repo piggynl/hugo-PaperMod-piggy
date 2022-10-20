@@ -1,0 +1,11 @@
+- id: toc
+  translation: "ijo"
+
+- id: powered_by_before
+  translation: "kepeken e"
+
+- id: powered_by_after
+  translation: " "
+
+- id: modified_by_piggy
+  translation: "(ante)"

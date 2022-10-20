@@ -1,23 +1,32 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
     {{- if not site.Params.footer.hideCopyright }}
-        {{- if site.Copyright }}
-        <span>{{ site.Copyright | markdownify }}</span>
-        {{- else }}
-        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
-        {{- end }}
-        {{- print " · "}}
+    {{- if site.Copyright }}
+    <span>{{ site.Copyright | markdownify }}</span>
+    {{- else }}
+    {{- $copyrightYear := string now.Year }}
+    {{- if (and site.Params.copyrightBeginYear (ne site.Params.copyrightBeginYear now.Year))}}
+    {{- $copyrightYear = printf "%d - %d" site.Params.copyrightBeginYear now.Year }}
+    {{- end }}
+    <span>&copy; {{ $copyrightYear }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
+    {{- end }}
+    {{- print " · "}}
     {{- end }}
 
     {{- with site.Params.footer.text }}
-        {{ . | markdownify }}
-        {{- print " · "}}
+    {{ . | markdownify }}
+    {{- print " · "}}
     {{- end }}
 
     <span>
-        Powered by
+        {{- i18n "powered_by_before" }}
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/compare/master...piggynl:hugo-PaperMod-piggy:piggy"
+            rel="noopener noreferrer" target="_blank">
+            {{ i18n "modified_by_piggy" }}
+        </a>
+        {{ i18n "powered_by_after" }}
     </span>
 </footer>
 {{- end }}

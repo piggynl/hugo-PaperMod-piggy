@@ -18,7 +18,7 @@
   translation: "Table of Contents"
 
 - id: translations
-  translation: "Translations"
+  translation: "Languages"
 
 - id: home
   translation: "Home"
@@ -31,3 +31,12 @@
 
 - id: code_copied
   translation: "copied!"
+
+- id: powered_by_before
+  translation: "Powered by"
+
+- id: powered_by_after
+  translation: " "
+
+- id: modified_by_piggy
+  translation: "(modified)"
